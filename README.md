@@ -1,1 +1,1 @@
-# spring-3.0-security-poc
+# spring-boot-3.0-spring-security-poc
