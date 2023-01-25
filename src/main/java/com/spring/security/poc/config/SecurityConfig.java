@@ -13,7 +13,6 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
-
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
@@ -29,7 +28,6 @@ public class SecurityConfig {
                 .password("{noop}admin123")
                 .roles("ADMIN")
                 .build();
-
         return new InMemoryUserDetailsManager(normalUser, adminUser);
     }
     @Bean
@@ -48,6 +46,5 @@ public class SecurityConfig {
                 .and()
                 .formLogin();
         return httpSecurity.build();
-
     }
 }
